@@ -1,0 +1,46 @@
+nmap :
+nmap --script vuln -p 80 testphp.vulnweb.com
+1.	Basic usage for nmap
+namp google.com
+ 
+
+2.	Use nmap -sA to get remote firewall settings
+namp -sA google.com 
+	 
+
+3.	Use * to scan the whole subnet: 
+ nmap 199.59.243.*
+ 
+This commands scans for all the hosts in a given subnet.
+ 
+
+4.	Use ‘-’ to scan for a range of IP addresses. Eg - nmap 192.68.1.1-5 will scan for 5 addresses
+ 
+namp  192.68.1.1-5
+ 
+5.	Use option -sS for stealthily scanning all TCP SYN requests. Eg nmap -sS <Domain Name>
+ namp -sS 199.59.243.24
+
+6.	Use the option -oG to write the output of nmap to a file 
+ namp -sS 199.59.243.24 -oG new.txt
+ 
+7.	Use the option -iL to give input via a text file
+ 
+ 
+ namp -iL text.txt
+ 
+8.	Use -p for scanning specific ports or range of ports
+ 
+
+9.	Trace the route to the target with  - -trace option 
+ 
+namp --trance google.com
+
+ 
+10.	Use the option -O to find out the target’s OS
+ 
+namp -O google.com
+11.	
+
+
+sqlmap:
