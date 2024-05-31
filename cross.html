@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflected XSS Demo</title>
+</head>
+<body>
+    <h1>Reflected XSS Demo</h1>
+    <form action="#" method="GET">
+        <label for="name">Enter your name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        // JavaScript code to retrieve query parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        
+        // Displaying the name on the page
+        if (name) {
+            document.write('<h2>User Input:</h2>');
+            document.write('<p>' + name + '</p>');
+        }
+    </script>
+</body>
+</html>
